@@ -1,0 +1,130 @@
+:root {
+    --brand-primary: #8B0000;   
+    --brand-secondary: #F5F0E8; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.hero {
+    height: 100vh;
+    background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), url('../Images/bookshelf.jfif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.hero-content {
+    text-align: center;
+    color: var(--brand-secondary);
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 2rem 3rem;
+    border-radius: 8px;
+}
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--brand-secondary);
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.btn {
+    background-color: var(--brand-primary);
+    color: var(--brand-secondary);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+    background-color: #6a0000;
+    transform: scale(1.05);
+}
+.btn:focus {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+.authors {
+    padding: 4rem 2rem;
+    background-color: var(--brand-secondary);
+    text-align: center;
+}
+.authors h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--brand-primary);
+    margin-bottom: 2rem;
+}
+.author-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.author-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.author-card:hover {
+    transform: scale(1.03);
+}
+.author-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.author-card img:hover {
+    transform: scale(1.05);
+}
+.author-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--brand-primary);
+    margin: 1rem 0 0.5rem;
+    font-size: 1.3rem;
+}
+.author-card p {
+    color: #555;
+    line-height: 1.6;
+}
+/*for responsive design*/
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    .author-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (hover: none) {
+    .author-card:hover {
+        transform: none;
+    }
+    .author-card:active {
+        transform: scale(1.03);
+    }
+}
